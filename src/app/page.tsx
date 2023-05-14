@@ -1,34 +1,13 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play } from 'lucide-react'
+import { Footer } from '@/components/Footer'
+import { Sidebar } from '@/components/Sidebar'
+import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Heart, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume, Maximize2 } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        <aside className="w-72 bg-zinc-950 p-6">
-          <nav className='space-y-5'>
-            <a href="" className='flex items-center gap-3 text-sm font-semibold text-zinc-200'>
-              <HomeIcon />
-              Home
-            </a>
-            <a href="" className='flex items-center gap-3 text-sm font-semibold text-zinc-200'>
-              <Search />
-              Search
-            </a>
-            <a href="" className='flex items-center gap-3 text-sm font-semibold text-zinc-200'>
-              <Library />
-              Your Library
-            </a>
-          </nav>
-
-          <nav className='mt-6 pt-10 border-t border-zinc-800 flex flex-col gap-3'>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>Daily Mix 1</a>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>Daily Mix 2</a>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>Daily Mix 3</a>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>Daily Mix 4</a>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>Daily Mix 5</a>
-          </nav>
-        </aside>
+        <Sidebar />
         <main className="flex-1 p-6">
           <div className='flex items-center gap-4'>
             <button className='rounded-full bg-black/40 p-1'>
@@ -117,9 +96,7 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <footer className="bg-zinc-800 border-t border-zinc-700 p-6">
-        footer
-      </footer>
+      <Footer />
     </div>
   )
 }
